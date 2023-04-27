@@ -1,0 +1,59 @@
+
+#******************** Settings ************************
+
+*** Settings ***
+
+# TODO: Write Dcocumentation e.g. Project Test scenario. CRUD Operation: Create, Read, Update, Delete
+
+Documentation	
+
+# TODO: Write Precondition, Postcondition, Tags
+
+Pre Condition	 User is logged in to Gitlab, User is on the projects page in Gitlab, 
+Post Condition	 Close Browsers
+Tags Project, TS-4-Project(For Jira project management issue reference)
+
+#******************* Common Variables ********************
+
+*** Variables ***
+
+# NOTE: Please Remove your login credential before uploading Assignments
+
+# TODO: Write Project creation field variables
+
+
+
+#******************** Test Cases *************************
+
+*** Test Case ***
+
+# TODO: Write Positive and Negative Test Cases and Test Process steps
+
+# Positive Test
+
+	Create blank project
+	Navigate
+	Insert  project name  Project_Nam
+ 	Create template project 
+	Update name of template project
+	Delete template project
+	Valide that message is showing Project 'First project ' was successfully created.
+
+# Negative Test
+
+	Create a blank project with the previous same name
+  	Navigate
+	Insert  invalid Project name  Project_Nam,
+ 	Create template project, 
+	submit and press Enter,
+	Verify that the user is not redirected to a project page and instead an error message is displayed stating "The project could not be found".
+
+
+   Try accessing the project by manually changing the project ID in the URL to an invalid value.
+   Navigate 
+   Insert invalid value name 
+   Create template project, 
+	submit and press Enter, 
+	Error in the name of the project
+
+

@@ -1,0 +1,47 @@
+
+#******************** Settings ************************
+
+*** Settings ***
+Documentation	Issue Test scenario. CRUD Operation: Create, Read, Update, Delete
+
+# TODO: Write Precondition and Postcondition, Tags 
+
+Pre Condition	Project must be created by the user before creating a new one
+Post Condition	The user remains on the issue page, and the issue is not submitted.
+Tags  Issue TS-5-Project(For Jira project management issue reference)
+
+#******************* Common Variables ********************
+
+
+*** Variables ***
+
+# NOTE: Please Remove your login credential before uploading Assignments
+
+# TODO: Write Issue creation field variables, Updated name of the issue
+
+
+
+#******************** Test Cases *************************
+
+*** Test Case ***
+
+# TODO: Write Positive Test Cases and Test Process steps
+
+# Positive Test
+
+	Create issue,
+ 	Update name of issue, 
+	Create second issue with privious updated name
+    Delete first issue
+	Click on the submit button.
+
+
+#Negative Test 
+	Same name Issue,
+	Dont create issue,
+ 	Update name of issue to the same 
+	Create second issue with privious same name
+    Delete first issue
+	Click on the submit button.
+All fields should be highlighted in red or show an error message indicating that they are required.
+
